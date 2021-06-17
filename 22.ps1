@@ -16,5 +16,5 @@ $HTTPcodes = Select-String '(?<=HTTP/\d.\d")\s(\d{3})' -InputObject $content -Al
 
 $codesCount=$HTTPcodes | Group-Object Value
 
-$codesSort = $codesCount | Sort-Object -Property @{ Expression = 'count'; Descending = $true } | Format-Table -Property name, count|Select -First 12
+$codesSort = $codesCount | Sort-Object -Property @{ Expression = 'count'; Descending = $true } | Format-Table -Property name, count
 $codesSort

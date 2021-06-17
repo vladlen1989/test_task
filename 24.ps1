@@ -17,7 +17,7 @@ $ibVer = Select-String '/ibank/version.txt' -InputObject $content -AllMatches | 
 
 $ibCount= $ibVer | Group-Object Value
 
-$ibSort = $ibCount | Format-Table -Property name, count|Select -First 12
+$ibSort = $ibCount | Format-Table -Property name, count
 $ibSort
 
 
